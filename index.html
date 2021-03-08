@@ -5,8 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React for Begginers</title>
+
+    <script crossorigin src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
 </head>
 <body>
-    
+    <div id="app"></div>
+
+    <script type="text/babel">
+        function Button () {
+            return <button>Click</button>;
+        }
+
+        function App () {
+            return <div id="teste">My App <Button /></div>;
+        }
+
+        ReactDOM.render(<App />, document.getElementById('app'));
+    </script>
 </body>
 </html>
