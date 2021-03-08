@@ -18,8 +18,32 @@
             return <button>Click</button>;
         }
 
+        class Input extends React.Component {
+            render () {
+                return <input type="text"></input>
+            }
+        }
+
+        const MainNav = () => {
+            const MainNav = () => {
+                return (
+                    <nav>
+                        <ul>
+                            <li><a href="#">Link 1</a></li>    
+                            <li><a href="#">Link 2</a></li>    
+                        </ul>
+                    </nav>
+                )
+            }
+        }
+
         function App () {
-            return <div id="teste">My App <Button /></div>;
+            return <div id="teste">
+                My App <br/>
+                <MainNav />
+                <Input /> <br/>
+                <Button /> <br/>
+            </div>;
         }
 
         ReactDOM.render(<App />, document.getElementById('app'));
